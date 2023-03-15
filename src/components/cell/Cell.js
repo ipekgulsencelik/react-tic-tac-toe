@@ -1,7 +1,7 @@
-const Cell = () => {
-    return (
-        <div className="square"></div>
-    )
-}
+import style from "./style.module.scss";
 
-export default Cell
+const Cell = () => {
+  return <div className={`${style["square"]}`}></div>;
+};
+
+export default Cell;
