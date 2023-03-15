@@ -32,7 +32,7 @@ const Cell = ({ id, cell, setCells, go, setGo, cells, winnigMessage }) => {
   };
 
   return (
-    <div className="square" id={id} onClick={winnigMessage && handleClick}>
+    <div className="square" id={id} onClick={!winnigMessage && handleClick}>
       <div className={cell}></div>
     </div>
   );
