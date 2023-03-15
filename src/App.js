@@ -4,7 +4,12 @@ import Cell from "./components/cell/Cell";
 
 const App = () => {
   const [cells, setCells] = useState(["", "", "", "", "", "", "", "", ""]);
-  console.log(cells);
+
+  const [go, setGo] = useState("circle");
+
+  const [winnigMessage, setWinningMessage] = useState(null);
+  const message = "it is now " + go + " 's go.";
+
   return (
     <div className="App">
       <div className="gameboard">
@@ -12,7 +17,7 @@ const App = () => {
           <Cell key={index} id={index} cell={cell} />
         ))}
       </div>
-      <p></p>
+      <p>{message}</p>
     </div>
   );
 };
