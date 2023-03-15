@@ -57,6 +57,7 @@ const App = () => {
             go={go}
             setGo={setGo}
             cells={cells}
+            winnigMessage={winnigMessage}
           />
         ))}
       </div>

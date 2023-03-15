@@ -1,8 +1,7 @@
 import "./style.scss";
 
-const Cell = ({ id, cell, setCells, go, setGo, cells }) => {
+const Cell = ({ id, cell, setCells, go, setGo, cells, winnigMessage }) => {
   const handleClick = (e) => {
-    console.log(e.target);
     const taken =
       e.target.firstChild.classList.contains("circle") ||
       e.target.firstChild.classList.contains("cross");
@@ -33,7 +32,7 @@ const Cell = ({ id, cell, setCells, go, setGo, cells }) => {
   };
 
   return (
-    <div className="square" id={id} onClick={handleClick}>
+    <div className="square" id={id} onClick={winnigMessage && handleClick}>
       <div className={cell}></div>
     </div>
   );
